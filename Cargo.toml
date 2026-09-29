@@ -1,0 +1,9 @@
+[package]
+name = "avcii-sketch"
+version = "0.0.1"
+edition = "2021"
+license = "MIT"
+description = "A terminal cat motorcycle companion with simulated and local text-event controls"
+
+[dependencies]
+crossterm = "0.27"

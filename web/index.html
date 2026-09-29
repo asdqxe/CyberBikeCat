@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ReJar Pet · 聊天陪伴预览</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main>
+    <header><div class="brand">REJAR <span>PET</span></div><span class="badge">LOCAL PREVIEW · 无模型连接</span></header>
+    <div class="intro"><p class="eyebrow">A LITTLE COMPANY, WHILE YOU CREATE</p><h1>你提交想法，猫猫陪你出发。</h1><p>提交时提速，等待时巡航，完成时庆祝。任意文字都能触发任务反馈。</p></div>
+    <div class="workspace">
+      <section class="ride panel" aria-label="宠物实时动画">
+        <div class="panel-top"><span>城市骑行</span><span id="state">正在连接…</span></div>
+        <canvas id="pet" width="1000" height="540" aria-label="字符猫骑手动画"></canvas>
+        <div class="ride-footer"><span id="connection" role="status">连接本地渲染器…</span><span>同一个 Rust 场景 · 20 fps 显示</span></div>
+      </section>
+      <section class="chat panel" aria-label="聊天提交预览">
+        <div class="panel-top"><span>聊天输入框</span><span class="muted">PREVIEW</span></div>
+        <div id="messages" role="log" aria-live="polite"><div class="message system">这里验证提交与宠物反馈。文字只留在本页，不发送给模型；3 秒任务为明确标记的本地模拟。</div></div>
+        <form id="chat-form">
+          <label for="prompt">写下你的任务</label>
+          <textarea id="prompt" maxlength="4000" rows="4" placeholder="例如：帮我把今天的想法整理成一份计划。" required></textarea>
+          <div class="actions"><label class="outcome">预览结果 <select id="outcome"><option value="ok">完成</option><option value="fail">失败</option></select></label><button id="cancel" type="button" disabled>取消</button><button id="send" type="submit">提交预览 ↗</button></div>
+        </form>
+        <p id="feedback-error" role="status"></p>
+      </section>
+    </div>
+    <footer>当前为本地单会话预览。接入真实聊天请求后，来源改为 CHAT；无需枚举 prompt 内容。</footer>
+  </main>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+/target/
+/.pet-runtime*/
+/.aws/
+/.env
+/.env.*
+
+# Local development history; not part of the public source submission.
+/S2/
