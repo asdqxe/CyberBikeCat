@@ -1,4 +1,4 @@
-# ReJar Pet — 字符猫骑手（Linux 互动预览版）
+# CyberBikeCat — 字符猫骑手（Linux 互动预览版）
 
 状态：终端演示、文字事件及本地网页聊天预览已实现；尚未接入真实 Agent 或聊天宿主。
 项目面向 NVIDIA 赛事，目标设备为 **NVIDIA DGX Spark**，以 Linux 为运行平台。
